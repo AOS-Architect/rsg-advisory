@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSG Advisory — Scott Gravesande</title>
+<meta name="description" content="RSG Advisory — Scott Gravesande, Investment Advisor, Manulife Wealth Inc. Quiet authority. Long-view advice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #FAFAF7;
+    --surface: #F4F1EB;
+    --fg: #111111;
+    --secondary: #78746E;
+    --faint: #A8A39C;
+    --rule: #D8D5D0;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+  body { font-family: var(--font); background-color: var(--bg); color: var(--fg); line-height: 1.6; overflow-x: hidden; }
+  ::selection { background-color: var(--fg); color: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+  .site { min-height: 100vh; display: flex; flex-direction: column; opacity: 0; animation: breathe 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; }
+  @keyframes breathe { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+  /* HERO — the wordmark */
+  .hero { padding-top: clamp(5rem, 12vh, 9rem); padding-bottom: clamp(5rem, 10vh, 8rem); }
+  .mark { font-size: clamp(3rem, 9vw, 7rem); font-weight: 900; letter-spacing: -0.04em; line-height: 0.85; color: var(--fg); }
+  .descriptor { margin-top: clamp(0.5rem, 1vw, 0.875rem); font-size: clamp(0.65rem, 1vw, 0.8125rem); font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--secondary); }
+
+  /* INTRO BLOCK — below the wordmark */
+  .intro-block { padding-bottom: clamp(5rem, 12vh, 9rem); }
+  .intro-grid { display: grid; gap: clamp(3rem, 6vw, 5rem); align-items: start; }
+  @media (min-width: 900px) { .intro-grid { grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr); } }
+  .intro-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--secondary); margin-bottom: clamp(1.5rem, 3vw, 2rem); }
+  .intro-name { font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; color: var(--fg); margin-bottom: 0.5rem; }
+  .intro-role { font-size: clamp(0.9375rem, 1.1vw, 1.0625rem); font-weight: 600; color: var(--fg); margin-bottom: 0.125rem; }
+  .intro-role-firm { color: var(--secondary); font-weight: 500; }
+  .intro-tagline { margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 34rem; font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.6; color: var(--fg); }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; margin-top: clamp(2rem, 4vw, 2.5rem); align-items: center; }
+  .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.5rem; background: var(--fg); color: var(--bg); border-radius: 999px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.01em; transition: background 0.2s ease, transform 0.2s ease; }
+  .btn-primary:hover { background: #2a2a2a; transform: translateY(-1px); }
+  .link-secondary { font-size: 0.875rem; font-weight: 600; color: var(--fg); }
+  .link-secondary span { color: var(--secondary); font-weight: 500; margin-left: 0.375rem; }
+  .intro-aside { padding: clamp(1.75rem, 3vw, 2.25rem); background: var(--surface); border-radius: 8px; }
+  .intro-aside-stat { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); margin-bottom: 0.75rem; }
+  .intro-aside p { font-size: 0.9375rem; line-height: 1.65; color: var(--secondary); max-width: 32ch; }
+  .intro-aside hr { border: 0; border-top: 1px solid var(--rule); margin: 1.5rem 0; }
+
+  /* PHILOSOPHY — the statement */
+  .philosophy { padding-bottom: clamp(6rem, 14vh, 12rem); }
+  .philosophy-text { max-width: 38rem; font-size: clamp(1.05rem, 1.6vw, 1.2rem); font-weight: 400; line-height: 1.75; color: var(--fg); }
+
+  .divider { width: 100%; border: none; border-top: 1px solid var(--rule); }
+
+  /* SECTIONS — shared layout */
+  .section { padding-top: clamp(4rem, 8vh, 6rem); padding-bottom: clamp(4rem, 8vh, 6rem); }
+  .section-grid { display: grid; gap: clamp(2rem, 4vw, 4rem); }
+  @media (min-width: 900px) { .section-grid { grid-template-columns: 220px minmax(0, 1fr); } }
+  .section-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); }
+  .section-heading { font-size: clamp(1.5rem, 2.6vw, 2.25rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; max-width: 16ch; margin-bottom: clamp(1rem, 2vw, 1.5rem); color: var(--fg); }
+  .section-lead { max-width: 38rem; font-size: clamp(1rem, 1.3vw, 1.125rem); font-weight: 400; line-height: 1.7; color: var(--fg); }
+
+  /* WHO I WORK WITH — cards */
+  .cards { display: grid; gap: 1.25rem; margin-top: clamp(1.5rem, 3vw, 2rem); }
+  @media (min-width: 700px) { .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .card { padding: clamp(1.5rem, 2.5vw, 2rem); background: var(--surface); border-radius: 4px; }
+  .card h3 { font-size: 0.9375rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.75rem; color: var(--fg); }
+  .card p { font-size: 0.875rem; line-height: 1.65; color: var(--secondary); }
+
+  /* HOW I WORK — process */
+  .process { display: flex; flex-direction: column; margin-top: clamp(1.5rem, 3vw, 2rem); }
+  .step { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.5rem; padding: 1.75rem 0; border-top: 1px solid var(--rule); }
+  .step:first-child { border-top: 0; padding-top: 0.5rem; }
+  .step-num { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; color: var(--faint); padding-top: 0.25rem; }
+  .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--fg); }
+  .step p { font-size: 0.9375rem; line-height: 1.7; color: var(--secondary); max-width: 42rem; }
+
+  /* CREDENTIALS */
+  .credentials-inner { display: flex; flex-direction: column; gap: 0.625rem; }
+  .credential-line { font-size: 0.9375rem; font-weight: 400; color: var(--secondary); line-height: 1.7; }
+
+  /* CONTACT */
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+  @media (min-width: 640px) { .contact-grid { grid-template-columns: 1.2fr 1fr; gap: 3rem; } }
+  .contact-block-label { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); margin-bottom: 1.25rem; }
+  .contact-block-content { font-size: 0.9375rem; font-weight: 400; color: var(--fg); line-height: 1.5; }
+  .contact-phone { font-size: clamp(1.05rem, 1.4vw, 1.1875rem); font-weight: 500; letter-spacing: -0.005em; margin-top: 0.75rem; }
+  .contact-phone:first-child { margin-top: 0; }
+  .contact-email { font-size: clamp(0.9375rem, 1.1vw, 1.0625rem); word-break: break-all; }
+  .contact-phone a { color: var(--fg); border-bottom: 1px solid var(--rule); transition: border-color 0.3s ease; }
+  .contact-phone a:hover { border-color: var(--fg); }
+  .contact-address { font-size: clamp(1.05rem, 1.4vw, 1.1875rem); font-weight: 500; letter-spacing: -0.005em; color: var(--fg); margin-bottom: 0.25rem; }
+  .contact-meta { color: var(--secondary); font-size: 0.8125rem; margin-top: 0.125rem; }
+
+  /* FOOTER */
+  .footer { margin-top: auto; padding-top: clamp(3rem, 6vh, 4rem); padding-bottom: 2rem; }
+  .footer-logo { margin-bottom: 1.5rem; }
+  .footer-logo img { width: clamp(120px, 14vw, 160px); height: auto; display: block; }
+  .footer-inner { display: flex; flex-direction: column; gap: 1rem; }
+  @media (min-width: 640px) { .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+  .footer-text { font-size: 0.6875rem; font-weight: 400; color: var(--secondary); line-height: 1.7; max-width: 48rem; }
+  .footer-year { font-size: 0.6875rem; font-weight: 400; color: var(--secondary); white-space: nowrap; }
+
+  @media (max-width: 480px) { .container { padding: 0 1.5rem; } .mark { letter-spacing: -0.03em; } }
+  @media print { .site { opacity: 1; animation: none; } body { background: white; } }
+</style>
+</head>
+<body>
+<div class="site">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="mark">RSG</h1>
+      <p class="descriptor">Advisory</p>
+    </div>
+  </section>
+
+  <!-- INTRO BLOCK -->
+  <section class="intro-block">
+    <div class="container">
+      <p class="intro-eyebrow">Quiet authority. Long-view advice.</p>
+      <div class="intro-grid">
+        <div>
+          <p class="intro-name">Scott Gravesande</p>
+          <p class="intro-role">Senior Financial Advisor</p>
+          <p class="intro-role intro-role-firm">Manulife Wealth Inc.</p>
+          <p class="intro-tagline">For individuals and families who value a steady hand, clear thinking, and advice built for the long term.</p>
+          <div class="cta-row">
+            <a class="btn-primary" href="mailto:scott.gravesande@manulifewealth.ca?subject=Starting%20a%20private%20conversation">Start a private conversation</a>
+            <a class="link-secondary" href="tel:9059297268">Call Scott directly <span>905.929.7268</span></a>
+          </div>
+        </div>
+        <aside class="intro-aside" aria-label="Practice summary">
+          <p class="intro-aside-stat">Approach</p>
+          <p>Relationship-led advice shaped by continuity, judgment, and disciplined long-term planning.</p>
+          <hr>
+          <p class="intro-aside-stat">Location</p>
+          <p>Mississauga, Ontario<br>Serving individuals and families who prefer direct access and a measured approach.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="divider"></div>
+
+  <!-- POSITIONING / PHILOSOPHY -->
+  <section class="philosophy" style="padding-top: clamp(4rem, 8vh, 6rem);">
+    <div class="container section-grid">
+      <div class="section-label">Positioning</div>
+      <div>
+        <h2 class="section-heading">Advice that values continuity over noise.</h2>
+        <p class="philosophy-text">Twenty-three years of advisory work have made one thing clear: the relationships that matter most are built quietly, through continuity and conviction. I advise individuals and families who value a steady hand, a long view, and the patience to let a well-considered plan do its work. The best outcomes in this business are never rushed. They are earned.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="divider"></div>
+
+  <!-- WHO I WORK WITH -->
+  <section class="section">
+    <div class="container section-grid">
+      <div class="section-label">Who I work with</div>
+      <div>
+        <h2 class="section-heading">Built for clients who want a personal relationship.</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Individuals approaching major decisions</h3>
+            <p>For those preparing for retirement, entering a new stage, or thinking more carefully about long-term financial direction.</p>
+          </article>
+          <article class="card">
+            <h3>Families seeking continuity</h3>
+            <p>For households that value an ongoing relationship, clear guidance, and a measured approach through changing circumstances.</p>
+          </article>
+          <article class="card">
+            <h3>Clients who prefer direct access</h3>
+            <p>For people who want thoughtful advice, steady communication, and the confidence that comes from working with someone who knows their history.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="divider"></div>
+
+  <!-- HOW I WORK -->
+  <section class="section">
+    <div class="container section-grid">
+      <div class="section-label">How I work</div>
+      <div>
+        <h2 class="section-heading">A disciplined process, carried over time.</h2>
+        <div class="process">
+          <article class="step">
+            <div class="step-num">01</div>
+            <div>
+              <h3>Begin with a conversation</h3>
+              <p>Start with a private discussion about where you are now, what matters most, and what deserves attention first.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <div>
+              <h3>Bring structure to the important decisions</h3>
+              <p>Clarify priorities, identify opportunities, and shape a plan with care, perspective, and disciplined thinking.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <div>
+              <h3>Stay with the work over time</h3>
+              <p>Advice is not a one-time event. The best outcomes come from continuity, review, and steady execution over the long term.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="divider"></div>
+
+  <!-- CREDENTIALS -->
+  <section class="section">
+    <div class="container section-grid">
+      <div class="section-label">Credentials</div>
+      <div>
+        <h2 class="section-heading">Experienced, regulated, and relationship-led.</h2>
+        <div class="credentials-inner">
+          <p class="credential-line">Senior Financial Advisor, Manulife Wealth Inc.</p>
+          <p class="credential-line">Life Insurance Advisor, Manulife Wealth Insurance Services Inc.</p>
+          <p class="credential-line">Mississauga, Ontario</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="divider"></div>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <div class="container section-grid">
+      <div class="section-label">Contact</div>
+      <div>
+        <h2 class="section-heading">Start a private conversation.</h2>
+        <p class="section-lead" style="margin-bottom: clamp(2rem, 4vw, 2.5rem);">A direct conversation is the best place to begin.</p>
+        <div class="contact-grid">
+          <div class="contact-block">
+            <p class="contact-block-label">Reach</p>
+            <div class="contact-block-content">
+              <p class="contact-phone"><a href="tel:9059297268">905.929.7268</a></p>
+              <p class="contact-meta">Direct</p>
+              <p class="contact-phone"><a href="tel:9058969060">905.896.9060</a></p>
+              <p class="contact-meta">Office · Ext. 3828</p>
+              <p class="contact-phone"><a href="tel:8775533305">877.553.3305</a></p>
+              <p class="contact-meta">Toll Free</p>
+              <p class="contact-phone contact-email"><a href="mailto:scott.gravesande@manulifewealth.ca">scott.gravesande@manulifewealth.ca</a></p>
+              <p class="contact-meta">Email</p>
+            </div>
+          </div>
+          <div class="contact-block">
+            <p class="contact-block-label">Office</p>
+            <div class="contact-block-content">
+              <p class="contact-address">200–3 Robert Speck Parkway</p>
+              <p class="contact-meta">Mississauga, ON L4Z 2G5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <hr class="divider" style="margin-bottom: 2rem;">
+      <div class="footer-logo">
+        <img src="data:image/png;base64,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" alt="Manulife Wealth">
+      </div>
+      <div class="footer-inner">
+        <p class="footer-text">Scott Gravesande is a Senior Financial Advisor with Manulife Wealth Inc. and a Life Insurance Advisor with Manulife Wealth Insurance Services Inc. Manulife Wealth Inc. is a member of the Canadian Investment Regulatory Organization and a member of the Canadian Investor Protection Fund. Insurance products and services are offered through Manulife Wealth Insurance Services Inc.</p>
+        <p class="footer-year">&copy; 2026</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
