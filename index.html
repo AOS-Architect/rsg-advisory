@@ -117,6 +117,21 @@
   .footer-links a:hover { color: var(--fg); border-color: var(--fg); }
   .footer-links .sep { font-size: 0.6875rem; color: var(--faint); }
 
+
+  /* INSURANCE SOLUTIONS — resource link cards */
+  .resource-cards { display: grid; gap: 1.25rem; margin-top: clamp(1.5rem, 3vw, 2rem); }
+  @media (min-width: 700px) { .resource-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .resource-card { display: flex; flex-direction: column; padding: clamp(1.5rem, 2.5vw, 2rem); background: var(--surface); border-radius: 4px; color: inherit; text-decoration: none; transition: background 0.25s ease, transform 0.25s ease; position: relative; }
+  .resource-card:hover { background: #EFEBE3; transform: translateY(-2px); }
+  .resource-card h3 { font-size: 0.9375rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.75rem; color: var(--fg); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .resource-card h3 .arrow { font-size: 1.125rem; font-weight: 400; color: var(--secondary); transition: transform 0.25s ease, color 0.25s ease; }
+  .resource-card:hover h3 .arrow { transform: translateX(4px); color: var(--fg); }
+  .resource-card p { font-size: 0.875rem; line-height: 1.65; color: var(--secondary); }
+  .resource-card.upcoming { background: transparent; border: 1px dashed var(--rule); cursor: default; pointer-events: none; }
+  .resource-card.upcoming h3 { color: var(--secondary); }
+  .resource-card.upcoming h3 .arrow { display: none; }
+  .resource-note { margin-top: clamp(1.5rem, 3vw, 2rem); font-size: 0.75rem; line-height: 1.6; color: var(--faint); max-width: 44rem; }
+
   @media (max-width: 480px) { .container { padding: 0 1.5rem; } .mark { letter-spacing: -0.03em; } }
   @media print { .site { opacity: 1; animation: none; } body { background: white; } }
 </style>
@@ -227,6 +242,86 @@
             </div>
           </article>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="divider"></div>
+
+  <!-- MY APPROACH -->
+  <section class="section">
+    <div class="container section-grid">
+      <div class="section-label">My Approach</div>
+      <div>
+        <h2 class="section-heading">The principles that guide the work.</h2>
+        <div class="process">
+          <article class="step">
+            <div class="step-num">01</div>
+            <div>
+              <h3>Listen first</h3>
+              <p>Understand what matters to you, and why, before offering direction. Financial priorities look different in every household.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <div>
+              <h3>Keep it clear</h3>
+              <p>Explain complex ideas in plain language. Decisions made with clarity hold up better than decisions made with jargon.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <div>
+              <h3>Plan for your life, not the market</h3>
+              <p>Base recommendations on your goals, timelines, and circumstances — not headlines or short-term market noise.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">04</div>
+            <div>
+              <h3>Move with discipline</h3>
+              <p>Stay the course when patience is required. Adjust when circumstances genuinely change. Recognize the difference between the two.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">05</div>
+            <div>
+              <h3>Protect what you have built</h3>
+              <p>Consider risk, tax, and continuity with the same care given to return. Growth means little without preservation alongside it.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-num">06</div>
+            <div>
+              <h3>Stay close over time</h3>
+              <p>Advice earns its value through the years, not the transactions. Continuity is the discipline that separates a plan from a product.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><hr class="divider"></div>
+
+  <!-- INSURANCE SOLUTIONS -->
+  <section class="section">
+    <div class="container section-grid">
+      <div class="section-label">Insurance Solutions</div>
+      <div>
+        <h2 class="section-heading">Personal insurance solutions, available online.</h2>
+        <p class="section-lead">For clients seeking coverage between plan reviews, select insurance products can be quoted and enrolled directly online, with continuity of service through my office.</p>
+        <div class="resource-cards">
+          <a class="resource-card" href="https://www.manulife-insurance.ca/advisor-public/health-insurance.html?assocId=317189" target="_blank" rel="noopener">
+            <h3>Health &amp; Dental Insurance<span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Personal coverage for individuals and families not covered through an employer plan. Quote and apply online through Manulife.</p>
+          </a>
+          <a class="resource-card" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=cyc-XX_gMkSmMBoPaKKKBRox2Yhbju5PnG18L_YNSDtUQlozRkk5TFdLWjBZNERXQlo0SEpJVjBHWS4u" target="_blank" rel="noopener">
+            <h3>Travel Insurance<span class="arrow" aria-hidden="true">→</span></h3>
+            <p>Coverage for Canadians travelling abroad and visitors to Canada. Request a quote through the Manulife referral program — a licensed travel specialist will follow up directly.</p>
+          </a>
+        </div>
+        <p class="resource-note">Insurance products and services are offered through Manulife Wealth Insurance Services Inc. Online quoting and enrollment is provided by Manulife.</p>
       </div>
     </div>
   </section>
