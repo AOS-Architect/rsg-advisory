@@ -39,6 +39,7 @@
   "@type": "Person",
   "name": "Scott Gravesande",
   "jobTitle": "Senior Financial Advisor",
+  "image": "https://rsgadvisory.ca/assets/scott-gravesande.jpg",
   "worksFor": {
     "@type": "FinancialService",
     "name": "Manulife Wealth Inc.",
@@ -172,21 +173,15 @@
   @keyframes breathe { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
   .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-  /* HERO — the wordmark */
-  .hero { padding-top: clamp(5rem, 12vh, 9rem); padding-bottom: clamp(5rem, 10vh, 8rem); }
-  .mark { font-size: clamp(3rem, 9vw, 7rem); font-weight: 900; letter-spacing: -0.04em; line-height: 0.85; color: var(--fg); display: flex; align-items: baseline; flex-wrap: wrap; gap: clamp(0.5rem, 1.5vw, 1.25rem); }
-  .mark-sep { font-weight: 300; color: var(--faint); font-size: 0.85em; }
-  .mark-descriptor { font-weight: 500; font-size: clamp(0.9rem, 1.8vw, 1.4rem); letter-spacing: 0.16em; text-transform: uppercase; color: var(--secondary); align-self: center; padding-bottom: 0.4em; }
-  .descriptor { display: none; }
 
   /* INTRO BLOCK — below the wordmark */
   .intro-block { padding-bottom: clamp(5rem, 12vh, 9rem); }
   .intro-grid { display: grid; gap: clamp(3rem, 6vw, 5rem); align-items: start; }
   @media (min-width: 900px) { .intro-grid { grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr); } }
-  .intro-eyebrow { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--secondary); margin-bottom: clamp(1.5rem, 3vw, 2rem); }
+  .intro-eyebrow { font-size: clamp(1rem, 1.7vw, 1.25rem); font-weight: 500; letter-spacing: 0.14em; line-height: 1.4; text-transform: uppercase; color: #6F6B65; margin-bottom: clamp(1.5rem, 3vw, 2rem); }
   .intro-name { font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; color: var(--fg); margin-bottom: 0.5rem; }
   .intro-role { font-size: clamp(0.9375rem, 1.1vw, 1.0625rem); font-weight: 600; color: var(--fg); margin-bottom: 0.125rem; }
-  .intro-role-firm { color: var(--secondary); font-weight: 500; }
+  .intro-role-firm { color: var(--fg); font-weight: 600; }
   .intro-tagline { margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 34rem; font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.6; color: var(--fg); }
   .cta-row { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; margin-top: clamp(2rem, 4vw, 2.5rem); align-items: center; }
   .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.5rem; background: var(--fg); color: var(--bg); border-radius: 999px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.01em; transition: background 0.2s ease, transform 0.2s ease; }
@@ -277,7 +272,7 @@
   .resource-card.upcoming h3 .arrow { display: none; }
   .resource-note { margin-top: clamp(1.5rem, 3vw, 2rem); font-size: 0.75rem; line-height: 1.6; color: var(--faint); max-width: 44rem; }
 
-  @media (max-width: 480px) { .container { padding: 0 1.5rem; } .mark { letter-spacing: -0.03em; } }
+  @media (max-width: 480px) { .container { padding: 0 1.5rem; } }
 
   /* SITE HEADER */
   .site-header { padding: 1rem 0; border-bottom: 1px solid var(--rule); background: var(--bg); position: relative; z-index: 10; }
@@ -298,6 +293,19 @@
   .about-body p:last-of-type { margin-bottom: 0; }
   .about-body .cta-row { margin-top: clamp(1.5rem, 3vw, 2rem); }
 
+  /* SITE HEADER: v9 identification block (single-use) */
+  .header-inner { flex-wrap: wrap; row-gap: 0.75rem; }
+  .header-id { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+  .header-mark { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1; color: var(--fg); display: inline-flex; align-items: baseline; gap: 0.4rem; }
+  .header-mark-sep { font-weight: 300; color: var(--faint); font-size: 0.85em; }
+  .header-mark-descriptor { font-weight: 500; font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--secondary); }
+  .header-line { font-size: 0.8125rem; font-weight: 400; line-height: 1.4; color: #6F6B65; }
+  .header-line strong { font-weight: 700; color: var(--fg); }
+  .header-right { display: flex; align-items: center; gap: 1.5rem; }
+
+  /* CONTACT PHOTO: discreet circular headshot (single-use) */
+  .contact-photo { display: block; width: 104px; height: 104px; border-radius: 50%; object-fit: cover; margin-bottom: clamp(2rem, 4vw, 2.5rem); }
+
   @media print { .site { opacity: 1; animation: none; } body { background: white; } }
 </style>
 </head>
@@ -306,30 +314,30 @@
   <!-- SITE HEADER -->
   <header class="site-header">
     <div class="container header-inner">
+      <div class="header-id">
+        <a class="header-mark" href="/" aria-label="RSG | Advisory home">RSG <span class="header-mark-sep" aria-hidden="true">|</span> <span class="header-mark-descriptor">Advisory</span></a>
+        <p class="header-line"><strong>Scott Gravesande</strong> &middot; Senior Financial Advisor, Manulife Wealth Inc.</p>
+        <p class="header-line">Life Insurance Agent, Manulife Wealth Insurance Services Inc.</p>
+      </div>
+      <div class="header-right">
       <a href="https://www.manulife.com/ca/en/personal/wealth/manulife-wealth/sign-in/ip-redirect" class="header-brand" aria-label="Manulife Wealth client sign in" target="_blank" rel="noopener">
         <img src="data:image/png;base64,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" alt="Manulife Wealth" class="header-logo" width="110" height="20">
       </a>
       <nav class="header-actions" aria-label="Primary">
         <a class="header-link" href="https://www.manulife.com/ca/en/personal/wealth/manulife-wealth/sign-in/ip-redirect" target="_blank" rel="noopener">Client Login →</a>
       </nav>
+      </div>
     </div>
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="mark">RSG <span class="mark-sep" aria-hidden="true">|</span> <span class="mark-descriptor">Advisory</span></h1>
-    </div>
-  </section>
-
   <!-- INTRO BLOCK -->
-  <section class="intro-block">
+  <section class="intro-block" style="padding-top: clamp(3rem, 7vh, 5rem);">
     <div class="container">
       <p class="intro-eyebrow">Quiet authority. Long-view investment advice.</p>
       <div class="intro-grid">
         <div>
-          <p class="intro-name">Scott Gravesande</p>
+          <h1 class="intro-name">Scott Gravesande</h1>
           <p class="intro-role">Senior Financial Advisor, Manulife Wealth Inc.</p>
           <p class="intro-role intro-role-firm">Life Insurance Agent, Manulife Wealth Insurance Services Inc.</p>
           <p class="intro-tagline">For individuals and families who value a steady hand, clear thinking, and advice built for the long term.</p>
@@ -507,22 +515,29 @@
 
   <div class="container"><hr class="divider"></div>
 
-  <!-- INSIGHTS -->
+  <!-- INSIGHTS (v9 teaser: full library lives at /insights/) -->
   <section class="section">
     <div class="container section-grid">
       <div class="section-label">Insights</div>
       <div>
-        <h2 class="section-heading">Market commentary, prepared for clients.</h2>
+        <h2 class="section-heading">Insights, prepared for clients.</h2>
         <p class="section-lead">Monthly and quarterly commentary from Manulife Wealth&rsquo;s Capital Markets Strategy Team. Clear reads on what moved markets, and what to watch next.</p>
         <div class="resource-cards">
           <a class="resource-card" href="/insights/market-pulse-september-2026.pdf" target="_blank" rel="noopener">
             <h3>Market Pulse &mdash; September 2026<span class="arrow" aria-hidden="true">&rarr;</span></h3>
             <p>Higher yields, a U.S. rate increase, and trade uncertainty. What moved September markets, and what to watch into year-end.</p>
           </a>
-          <a class="resource-card" href="/insights/market-pulse-august-2026.pdf" target="_blank" rel="noopener">
-            <h3>Market Pulse &mdash; August 2026<span class="arrow" aria-hidden="true">&rarr;</span></h3>
-            <p>AI investment, rising Treasury yields, and renewed trade tensions. What drove August markets, and what to watch into the fall.</p>
+          <a class="resource-card" href="/insights/library/rrsp-the-facts.pdf" target="_blank" rel="noopener" data-source="https://www.manulifeim.com/retail/ca/en/viewpoints/retirement-planning/registered-retirement-savings-plans-rrsp-the-facts">
+            <h3>Registered Retirement Savings Plan (RRSP) &mdash; the facts<span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>How RRSPs work, tax-deductible contributions, and using an RRSP to build a sound retirement plan.</p>
           </a>
+          <a class="resource-card" href="/insights/#resources">
+            <h3>Useful Resources<span class="arrow" aria-hidden="true">&rarr;</span></h3>
+            <p>Government, regulatory and planning resources worth bookmarking, gathered in one place.</p>
+          </a>
+        </div>
+        <div class="cta-row">
+          <a class="link-secondary" href="/insights/">View all insights <span>&rarr;</span></a>
         </div>
         <p class="resource-note">Market commentary prepared by Manulife Wealth&rsquo;s Capital Markets Strategy Team. Views are those of the authors and may not reflect those of Manulife Wealth Inc. Not personalized financial advice.</p>
       </div>
@@ -554,6 +569,7 @@
       <div>
         <h2 class="section-heading">Start a private conversation.</h2>
         <p class="section-lead" style="margin-bottom: clamp(2rem, 4vw, 2.5rem);">A direct conversation is the best place to begin.</p>
+        <img class="contact-photo" src="/assets/scott-gravesande.jpg" alt="Scott Gravesande" width="104" height="104">
         <div class="contact-grid">
           <div class="contact-block">
             <p class="contact-block-label">Reach</p>
@@ -600,4 +616,9 @@
         <a href="https://www.manulifewealth.ca/clients/en/corporate-disclaimers" target="_blank" rel="noopener">Manulife Wealth Disclaimers</a>
         <span class="sep">·</span>
         <a href="https://www.manulife.ca/privacy-policies.html" target="_blank" rel="noopener">Privacy Policy</a>
-      <
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
