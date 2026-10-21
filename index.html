@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scott Gravesande | Senior Financial Advisor | Manulife Wealth</title>
-<meta name="description" content="RSG | Advisory — Scott Gravesande, Senior Financial Advisor, Manulife Wealth Inc. Quiet authority. Long-view investment advice.">
+<meta name="description" content="RSG | Advisory — Scott Gravesande, Senior Financial Advisor, Manulife Wealth Inc., Mississauga, Ontario. Quiet authority. Long-view investment advice.">
 <link rel="canonical" href="https://rsgadvisory.ca/">
 <meta name="author" content="Scott Gravesande">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RSG | Advisory">
 <meta property="og:title" content="Scott Gravesande | Senior Financial Advisor | Manulife Wealth">
-<meta property="og:description" content="Scott Gravesande, Senior Financial Advisor, Manulife Wealth Inc. Quiet authority. Long-view investment advice for individuals and families.">
+<meta property="og:description" content="Scott Gravesande, Senior Financial Advisor, Manulife Wealth Inc., Mississauga, Ontario. Quiet authority. Long-view investment advice for individuals and families.">
 <meta property="og:url" content="https://rsgadvisory.ca/">
 <meta property="og:locale" content="en_CA">
 <meta property="og:image" content="https://rsgadvisory.ca/og-image.png">
@@ -29,7 +29,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Scott Gravesande | Senior Financial Advisor | Manulife Wealth">
-<meta name="twitter:description" content="Scott Gravesande, Senior Financial Advisor, Manulife Wealth Inc. Quiet authority. Long-view investment advice.">
+<meta name="twitter:description" content="Scott Gravesande, Senior Financial Advisor, Manulife Wealth Inc., Mississauga, Ontario. Quiet authority. Long-view investment advice.">
 <meta name="twitter:image" content="https://rsgadvisory.ca/og-image.png">
 
 <!-- Structured Data (Schema.org / JSON-LD) -->
@@ -162,6 +162,9 @@
     --fg: #111111;
     --secondary: #6B665F;
     --faint: #6F6B65;
+    --surface-hover: #EFEBE3;
+    --fg-hover: #2A2A2A;
+    --radius: 4px;
     --rule: #D8D5D0;
     --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   }
@@ -178,14 +181,14 @@
   .intro-block { padding-bottom: clamp(5rem, 12vh, 9rem); }
   .intro-grid { display: grid; gap: clamp(3rem, 6vw, 5rem); align-items: start; }
   @media (min-width: 900px) { .intro-grid { grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr); } }
-  .intro-eyebrow { font-size: clamp(1rem, 1.7vw, 1.25rem); font-weight: 500; letter-spacing: 0.14em; line-height: 1.4; text-transform: uppercase; color: #6F6B65; margin-bottom: clamp(1.5rem, 3vw, 2rem); }
+  .intro-eyebrow { font-size: clamp(1rem, 1.7vw, 1.25rem); font-weight: 500; letter-spacing: 0.14em; line-height: 1.4; text-transform: uppercase; color: var(--faint); margin-bottom: clamp(1.5rem, 3vw, 2rem); }
   .intro-name { font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; color: var(--fg); margin-bottom: 0.5rem; }
   .intro-role { font-size: clamp(0.9375rem, 1.1vw, 1.0625rem); font-weight: 600; color: var(--fg); margin-bottom: 0.125rem; }
   .intro-role-firm { color: var(--fg); font-weight: 600; }
   .intro-tagline { margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 34rem; font-size: clamp(1.0625rem, 1.4vw, 1.1875rem); line-height: 1.6; color: var(--fg); }
   .cta-row { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; margin-top: clamp(2rem, 4vw, 2.5rem); align-items: center; }
   .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 0.875rem 1.5rem; background: var(--fg); color: var(--bg); border-radius: 999px; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.01em; transition: background 0.2s ease, transform 0.2s ease; }
-  .btn-primary:hover { background: #2a2a2a; transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--fg-hover); transform: translateY(-1px); }
   .link-secondary { font-size: 0.875rem; font-weight: 600; color: var(--fg); }
   .link-secondary span { color: var(--secondary); font-weight: 500; margin-left: 0.375rem; }
   .intro-aside { padding: clamp(1.75rem, 3vw, 2.25rem); background: var(--surface); border-radius: 8px; }
@@ -210,9 +213,9 @@
   /* WHO I WORK WITH — cards */
   .cards { display: grid; gap: 1.25rem; margin-top: clamp(1.5rem, 3vw, 2rem); }
   @media (min-width: 700px) { .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  .card { padding: clamp(1.5rem, 2.5vw, 2rem); background: var(--surface); border-radius: 4px; }
-  .card h3 { font-size: 0.9375rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.75rem; color: var(--fg); }
-  .card p { font-size: 0.875rem; line-height: 1.65; color: var(--secondary); }
+  .card, .resource-card { padding: clamp(1.5rem, 2.5vw, 2rem); background: var(--surface); border-radius: var(--radius); }
+  .card h3, .resource-card h3 { font-size: 0.9375rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.75rem; color: var(--fg); }
+  .card p, .resource-card p { font-size: 0.875rem; line-height: 1.65; color: var(--secondary); }
 
   /* HOW I WORK — process */
   .process { display: flex; flex-direction: column; margin-top: clamp(1.5rem, 3vw, 2rem); }
@@ -261,12 +264,11 @@
   /* INSURANCE SOLUTIONS — resource link cards */
   .resource-cards { display: grid; gap: 1.25rem; margin-top: clamp(1.5rem, 3vw, 2rem); }
   @media (min-width: 700px) { .resource-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  .resource-card { display: flex; flex-direction: column; padding: clamp(1.5rem, 2.5vw, 2rem); background: var(--surface); border-radius: 4px; color: inherit; text-decoration: none; transition: background 0.25s ease, transform 0.25s ease; position: relative; }
-  .resource-card:hover { background: #EFEBE3; transform: translateY(-2px); }
-  .resource-card h3 { font-size: 0.9375rem; font-weight: 600; line-height: 1.4; margin-bottom: 0.75rem; color: var(--fg); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .resource-card { display: flex; flex-direction: column; color: inherit; text-decoration: none; transition: background 0.25s ease, transform 0.25s ease; position: relative; }
+  .resource-card:hover { background: var(--surface-hover); transform: translateY(-2px); }
+  .resource-card h3 { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   .resource-card h3 .arrow { font-size: 1.125rem; font-weight: 400; color: var(--secondary); transition: transform 0.25s ease, color 0.25s ease; }
   .resource-card:hover h3 .arrow { transform: translateX(4px); color: var(--fg); }
-  .resource-card p { font-size: 0.875rem; line-height: 1.65; color: var(--secondary); }
   .resource-card.upcoming { background: transparent; border: 1px dashed var(--rule); cursor: default; pointer-events: none; }
   .resource-card.upcoming h3 { color: var(--secondary); }
   .resource-card.upcoming h3 .arrow { display: none; }
@@ -279,19 +281,11 @@
   .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
   .header-brand { color: var(--fg); text-decoration: none; }
   .header-logo { height: 20px; width: auto; display: block; opacity: 0.9; }
-  .header-brand-text { font-size: 0.9375rem; font-weight: 600; letter-spacing: -0.005em; color: var(--fg); }
   .header-actions { display: flex; align-items: center; gap: 1.5rem; }
   .header-link { font-size: 0.8125rem; font-weight: 500; color: var(--secondary); letter-spacing: 0.01em; transition: color 0.2s ease; display: inline-flex; align-items: center; gap: 0.375rem; }
   .header-link:hover { color: var(--fg); }
 
   /* ABOUT — photo + bio + CTA */
-  .about-grid { display: grid; gap: clamp(2rem, 4vw, 3rem); margin-top: clamp(1.5rem, 3vw, 2rem); align-items: start; }
-  @media (min-width: 700px) { .about-grid { grid-template-columns: minmax(200px, 280px) minmax(0, 1fr); } }
-  .about-photo-wrap { width: 100%; max-width: 280px; }
-  .about-photo { width: 100%; height: auto; display: block; border-radius: 4px; }
-  .about-body p { font-size: clamp(0.9375rem, 1.1vw, 1.0625rem); line-height: 1.75; color: var(--fg); margin-bottom: 1rem; max-width: 42rem; }
-  .about-body p:last-of-type { margin-bottom: 0; }
-  .about-body .cta-row { margin-top: clamp(1.5rem, 3vw, 2rem); }
 
   /* SITE HEADER: v9 identification block (single-use) */
   .header-inner { flex-wrap: wrap; row-gap: 0.75rem; }
@@ -299,7 +293,7 @@
   .header-mark { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1; color: var(--fg); display: inline-flex; align-items: baseline; gap: 0.4rem; }
   .header-mark-sep { font-weight: 300; color: var(--faint); font-size: 0.85em; }
   .header-mark-descriptor { font-weight: 500; font-size: 0.6875rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--secondary); }
-  .header-line { font-size: 0.8125rem; font-weight: 400; line-height: 1.4; color: #6F6B65; }
+  .header-line { font-size: 0.8125rem; font-weight: 400; line-height: 1.4; color: var(--faint); }
   .header-line strong { font-weight: 700; color: var(--fg); }
   .header-right { display: flex; align-items: center; gap: 1.5rem; }
 
@@ -309,14 +303,22 @@
   @media print { .site { opacity: 1; animation: none; } body { background: white; } }
 
   /* ACCESSIBILITY (WCAG 2.1 AA): skip link, focus ring, larger hit areas, reduced motion */
-  .skip-link { position: absolute; left: 1rem; top: -4rem; background: #111111; color: #FAFAF7; padding: 0.75rem 1rem; border-radius: 4px; font-size: 0.875rem; font-weight: 600; z-index: 100; }
+  .skip-link { position: absolute; left: 1rem; top: -4rem; background: var(--fg); color: var(--bg); padding: 0.75rem 1rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 600; z-index: 100; }
   .skip-link:focus { top: 1rem; }
-  a:focus-visible, button:focus-visible { outline: 2px solid #111111; outline-offset: 3px; border-radius: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; border-radius: 2px; }
   .header-brand, .link-secondary, .contact-phone a, .footer-links a { position: relative; }
   .header-brand::after, .link-secondary::after, .contact-phone a::after, .footer-links a::after { content: ""; position: absolute; left: 0; right: 0; top: -12px; bottom: -12px; }
   .footer-text, .footer-year, .footer-links a, .footer-links .sep { font-size: 0.75rem; }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
   @media (prefers-reduced-motion: reduce) { .site { animation: none; opacity: 1; } .resource-card { transition: none; } }
+
+  /* Modifier classes (replace former inline styles) */
+  .intro-block--top { padding-top: clamp(3rem, 7vh, 5rem); }
+  .philosophy--top { padding-top: clamp(4rem, 8vh, 6rem); }
+  .section-lead--spaced { margin-bottom: clamp(2rem, 4vw, 2.5rem); }
+  .divider--footer { margin-bottom: 2rem; }
+  .section-label--gap-sm { margin-top: clamp(1.5rem, 3vw, 2rem); }
+  .section-label--gap-md { margin-top: clamp(2rem, 4vw, 3rem); }
 </style>
 </head>
 <body>
@@ -326,7 +328,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="header-id">
-        <a class="header-mark" href="/" aria-label="RSG | Advisory home">RSG <span class="header-mark-sep" aria-hidden="true">|</span> <span class="header-mark-descriptor">Advisory</span></a>
+        <a class="header-mark" href="/" aria-label="RSG Advisory, home">RSG <span class="header-mark-sep" aria-hidden="true">|</span> <span class="header-mark-descriptor">Advisory</span></a>
         <p class="header-line"><strong>Scott Gravesande</strong> &middot; Senior Financial Advisor, Manulife Wealth Inc.</p>
         <p class="header-line">Life Insurance Agent, Manulife Wealth Insurance Services Inc.</p>
       </div>
@@ -344,7 +346,7 @@
 
 
   <!-- INTRO BLOCK -->
-  <section class="intro-block" style="padding-top: clamp(3rem, 7vh, 5rem);">
+  <section class="intro-block intro-block--top">
     <div class="container">
       <p class="intro-eyebrow">Quiet authority. Long-view investment advice.</p>
       <div class="intro-grid">
@@ -355,7 +357,7 @@
           <p class="intro-tagline">For individuals and families who value a steady hand, clear thinking, and advice built for the long term.</p>
           <div class="cta-row">
             <a class="btn-primary" href="mailto:scott.gravesande@manulifewealth.ca?subject=Starting%20a%20private%20conversation">Start a private conversation</a>
-            <a class="link-secondary" href="tel:9059297268">Call Scott directly <span>905.929.7268</span></a>
+            <a class="link-secondary" href="tel:9059297268">Call me directly <span>905.929.7268</span></a>
           </div>
         </div>
         <aside class="intro-aside" aria-label="Practice summary">
@@ -372,7 +374,7 @@
   <div class="container"><hr class="divider"></div>
 
   <!-- POSITIONING / PHILOSOPHY -->
-  <section class="philosophy" style="padding-top: clamp(4rem, 8vh, 6rem);">
+  <section class="philosophy philosophy--top">
     <div class="container section-grid">
       <div class="section-label">Positioning</div>
       <div>
@@ -509,7 +511,7 @@
       <div class="section-label">Insurance Solutions</div>
       <div>
         <h2 class="section-heading">Personal insurance solutions, available online.</h2>
-        <p class="section-lead">For clients seeking coverage between plan reviews, select insurance products can be quoted and enrolled directly online, with continuity of service through my office.</p>
+        <p class="section-lead">For clients seeking coverage between plan reviews, select insurance products can be quoted and enrolled online, or requested through a short form, with continuity of service through my office.</p>
         <div class="resource-cards">
           <a class="resource-card" href="https://www.manulife-insurance.ca/advisor-public/health-insurance.html?assocId=317189" target="_blank" rel="noopener">
             <h3>Health &amp; Dental Insurance<span class="arrow" aria-hidden="true">→</span></h3>
@@ -520,7 +522,7 @@
             <p>Coverage for Canadians travelling abroad and visitors to Canada. Request a quote through the Manulife referral program — a licensed travel specialist will follow up directly.</p>
           <span class="sr-only"> (opens in a new tab)</span></a>
         </div>
-        <p class="resource-note">Insurance products and services are offered through Manulife Wealth Insurance Services Inc. Online quoting and enrollment is provided by Manulife.</p>
+        <p class="resource-note">Insurance products and services are offered through Manulife Wealth Insurance Services Inc. Online quoting and enrolment is provided by Manulife.</p>
       </div>
     </div>
   </section>
@@ -580,7 +582,7 @@
       <div class="section-label">Contact</div>
       <div>
         <h2 class="section-heading">Start a private conversation.</h2>
-        <p class="section-lead" style="margin-bottom: clamp(2rem, 4vw, 2.5rem);">A direct conversation is the best place to begin.</p>
+        <p class="section-lead section-lead--spaced">A direct conversation is the best place to begin.</p>
         <img class="contact-photo" src="/assets/scott-gravesande.jpg" alt="Scott Gravesande" width="104" height="104">
         <div class="contact-grid">
           <div class="contact-block">
@@ -612,7 +614,7 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <hr class="divider" style="margin-bottom: 2rem;">
+      <hr class="divider divider--footer">
       <div class="footer-logo">
         <img src="data:image/png;base64,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" alt="Manulife Wealth">
       </div>
