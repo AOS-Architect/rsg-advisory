@@ -319,6 +319,11 @@
   .divider--footer { margin-bottom: 2rem; }
   .section-label--gap-sm { margin-top: clamp(1.5rem, 3vw, 2rem); }
   .section-label--gap-md { margin-top: clamp(2rem, 4vw, 3rem); }
+  /* Tile cues (format and cadence) and in-page links */
+  .tile-tag { display: block; font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); margin-bottom: 0.625rem; }
+  .page-jump { display: flex; flex-wrap: wrap; gap: 0 1.75rem; margin-top: 1rem; }
+  .page-jump a { display: inline-block; padding: 0.625rem 0; font-size: 0.875rem; font-weight: 500; color: var(--secondary); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 5px; transition: color 0.2s ease, text-decoration-color 0.2s ease; }
+  .page-jump a:hover { color: var(--fg); text-decoration-color: var(--fg); }
 </style>
 </head>
 <body>
@@ -514,11 +519,11 @@
         <p class="section-lead">For clients seeking coverage between plan reviews, select insurance products can be quoted and enrolled online, or requested through a short form, with continuity of service through my office.</p>
         <div class="resource-cards">
           <a class="resource-card" href="https://www.manulife-insurance.ca/advisor-public/health-insurance.html?assocId=317189" target="_blank" rel="noopener">
-            <h3>Health &amp; Dental Insurance<span class="arrow" aria-hidden="true">→</span></h3>
+            <h3>Health &amp; Dental Insurance<span class="arrow" aria-hidden="true">&nearr;</span></h3>
             <p>Personal coverage for individuals and families not covered through an employer plan. Quote and apply online through Manulife.</p>
           <span class="sr-only"> (opens in a new tab)</span></a>
           <a class="resource-card" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=cyc-XX_gMkSmMBoPaKKKBRox2Yhbju5PnG18L_YNSDtUQlozRkk5TFdLWjBZNERXQlo0SEpJVjBHWS4u" target="_blank" rel="noopener">
-            <h3>Travel Insurance<span class="arrow" aria-hidden="true">→</span></h3>
+            <h3>Travel Insurance<span class="arrow" aria-hidden="true">&nearr;</span></h3>
             <p>Coverage for Canadians travelling abroad and visitors to Canada. Request a quote through the Manulife referral program — a licensed travel specialist will follow up directly.</p>
           <span class="sr-only"> (opens in a new tab)</span></a>
         </div>
@@ -538,10 +543,12 @@
         <p class="section-lead">Monthly and quarterly commentary from Manulife Wealth&rsquo;s Capital Markets Strategy Team. Clear reads on what moved markets, and what to watch next.</p>
         <div class="resource-cards">
           <a class="resource-card" href="/insights/market-pulse-september-2026.pdf" target="_blank" rel="noopener">
+            <span class="tile-tag" aria-hidden="true">Monthly &middot; PDF</span>
             <h3>Market Pulse &mdash; September 2026<span class="arrow" aria-hidden="true">&rarr;</span></h3>
             <p>Higher yields, a U.S. rate increase, and trade uncertainty. What moved September markets, and what to watch into year-end.</p>
           <span class="sr-only"> (PDF, opens in a new tab)</span></a>
           <a class="resource-card" href="/insights/library/rrsp-the-facts.pdf" target="_blank" rel="noopener" data-source="https://www.manulifeim.com/retail/ca/en/viewpoints/retirement-planning/registered-retirement-savings-plans-rrsp-the-facts">
+            <span class="tile-tag" aria-hidden="true">PDF</span>
             <h3>Registered Retirement Savings Plan (RRSP) &mdash; the facts<span class="arrow" aria-hidden="true">&rarr;</span></h3>
             <p>How RRSPs work, tax-deductible contributions, and using an RRSP to build a sound retirement plan.</p>
           <span class="sr-only"> (PDF, opens in a new tab)</span></a>
