@@ -282,6 +282,9 @@
 
   @media (max-width: 480px) { .container { padding: 0 1.5rem; } }
 
+  /* HERO BAND: full-width photograph under the header */
+  .hero-band { display: block; width: 100%; height: clamp(150px, 22vw, 280px); object-fit: cover; object-position: center 88%; background: var(--surface); }
+
   /* SITE HEADER */
   .site-header { padding: 1rem 0; border-bottom: 1px solid var(--rule); background: var(--bg); position: relative; z-index: 10; }
   .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
@@ -353,6 +356,11 @@
       </div>
     </div>
   </header>
+  <picture>
+    <source media="(max-width: 700px)" srcset="/assets/hero-coast-800.webp" type="image/webp">
+    <source srcset="/assets/hero-coast.webp" type="image/webp">
+    <img class="hero-band" src="/assets/hero-coast.jpg" width="2000" height="768" alt="" fetchpriority="high" decoding="async">
+  </picture>
 <main id="main">
 
 
